@@ -183,7 +183,7 @@
   .meta a { color: var(--muted); }
   .meta a:hover { color: var(--accent); }
 
-  .roster { grid-area: roster; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; padding-top: 18px; margin: 0; list-style: none; }
+  .roster { grid-area: roster; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; padding-top: 18px; margin: 0; list-style: none; }
   .tile {
     --c: var(--line); --tc: #fff;
     position: relative; width: 100%; border: 0; cursor: pointer; padding: 10px 8px 12px;
@@ -294,6 +294,7 @@
       <li><a href="https://kazoogod02.github.io/jesus-simulator/">Jesus Simulator</a></li>
       <li><a href="https://kazoogod02.github.io/carlos-simulator/">Carlos Simulator</a></li>
       <li><a href="https://kazoogod02.github.io/daniel-simulator/">Daniel Simulator</a></li>
+      <li><a href="https://kazoogod02.github.io/super-simulator/">SUPER SIMULATOR</a></li>
     </ul>
   </div>
 </noscript>
@@ -350,7 +351,7 @@
 
   <footer>
     <span>© 2026 Kazoo Studios · Juegos +18 de parodia · <a href="https://github.com/KazooGod02" target="_blank" rel="noopener">@KazooGod02</a></span>
-    <span class="keys"><span><kbd>←</kbd><kbd>→</kbd>elegir</span><span><kbd>ENTER</kbd>jugar</span><span><kbd>1-5</kbd>directo</span><span><kbd>R</kbd>azar</span><span><kbd>M</kbd>sonido</span></span>
+    <span class="keys"><span><kbd>←</kbd><kbd>→</kbd>elegir</span><span><kbd>ENTER</kbd>jugar</span><span><kbd>1-6</kbd>directo</span><span><kbd>R</kbd>azar</span><span><kbd>M</kbd>sonido</span></span>
   </footer>
 </main>
 
@@ -459,7 +460,7 @@
       },
     },
     {
-      id: "daniel", name: "DANIEL", call: "¡DANIEL!", color: "#6fb7ff", isNew: true,
+      id: "daniel", name: "DANIEL", call: "¡DANIEL!", color: "#6fb7ff",
       title: "DANIEL SIMULATOR", subtitle: "El Ojo de la Primavera", genre: "PELEAS · AVENTURA",
       desc: "El huracán Chuyita se llevó a Nieve, el husky de Daniel. Cruza Culiacán en una sola noche, pártele la madre a todo lo que se mueva y rescátalo.",
       stats: [["5", "actos"], ["5", "jefes"], ["4", "finales"]],
@@ -478,6 +479,17 @@
         7: "..h..........r..",
         10: "..........w.....",
       },
+    },
+    {
+      id: "super", name: "SUPER", call: "¡TODOS!", color: "#ff2bd6", isNew: true,
+      title: "SUPER SIMULATOR", subtitle: "El último Simulator", genre: "AVENTURA EN EQUIPO",
+      desc: "Kazoo encuentra una piedra que abre portales entre dimensiones y tiene que juntar a César, Jesús, Carlos y Daniel antes de que Simulator Cero les borre la partida. Todos juntos, por última vez.",
+      stats: [["15", "niveles"], ["13", "jefes"], ["5", "finales"]],
+      platforms: "PC · Control · Celular · 2 jugadores",
+      url: "https://kazoogod02.github.io/super-simulator/",
+      repo: "https://github.com/KazooGod02/super-simulator",
+      pal: { s: "#d9a27a", S: "#b07d5a", h: "#1d1712", m: "#6a2a2a", a: "#ffd23f", A: "#c79a12", c: "#ff2bd6", y: "#2ee6d6", w: "#ffffff" },
+      art: { 0: "..w..........w..", 2: ".....cccccc.....", 3: "....cccwwccc....", 4: "....cccccccc....", 5: "...cccccccccc...", 6: "....hh....hh....", 7: "....h......h....", 11: ".......yyyyyy...", 14: "..........ww....", 15: "..........ww...." },
     },
   ];
 
@@ -775,7 +787,7 @@
     const onControl = e.target.closest && e.target.closest("a, button");
     if (k === "ArrowLeft" || k === "a" || k === "A") { e.preventDefault(); if (!state.spinning) select(state.i - 1); }
     else if (k === "ArrowRight" || k === "d" || k === "D") { e.preventDefault(); if (!state.spinning) select(state.i + 1); }
-    else if (/^[1-5]$/.test(k)) { if (!state.spinning) select(+k - 1); }
+    else if (/^[1-6]$/.test(k)) { if (!state.spinning) select(+k - 1); }
     else if (k === "r" || k === "R") roulette();
     else if (k === "m" || k === "M") setMuted(!state.muted);
     else if ((k === "Enter" || k === " " || k === "z" || k === "Z") && !onControl) { e.preventDefault(); launch(); }

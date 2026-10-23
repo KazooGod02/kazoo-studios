@@ -9,12 +9,13 @@ El hub oficial para elegir los Simulators de **Kazoo Studios**, estilo pantalla 
 | 03 | JESUS SIMULATOR: El Héroe de Guamúchil | https://kazoogod02.github.io/jesus-simulator/ |
 | 04 | CARLOS SIMULATOR | https://kazoogod02.github.io/carlos-simulator/ |
 | 05 | DANIEL SIMULATOR: El Ojo de la Primavera | https://kazoogod02.github.io/daniel-simulator/ |
+| 06 | SUPER SIMULATOR: el último, todos juntos | https://kazoogod02.github.io/super-simulator/ |
 
 **+18:** todos los juegos tienen humor adulto.
 
 ## Controles
 
-- **← →** o **A D**: elegir · **1-5**: directo · **Enter / Espacio / Z**: jugar
+- **← →** o **A D**: elegir · **1-6**: directo · **Enter / Espacio / Z**: jugar
 - **R**: al azar · **M**: sonido
 - Funciona con control (cruceta + A) y en celular (toca para elegir, toca otra vez para jugar).
 
